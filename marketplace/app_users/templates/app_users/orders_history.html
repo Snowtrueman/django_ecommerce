@@ -1,0 +1,63 @@
+{% extends "app_users/basic_account.html" %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+    <div class="Section-content">
+        <div class="Orders">
+            {% for order in orders %}
+                <div class="Order Order_anons">
+                    <div class="Order-personal">
+                        <div class="row">
+                            <div class="row-block"><a class="Order-title" href="{% url 'order_detail' order.pk %}">Заказ&#32;<span
+                                    class="Order-numberOrder">№{{ order.pk }}</span>&#32;от&#32;<span
+                                    class="Order-dateOrder">{{ order.date|date }}</span></a>
+                            </div>
+                            <div class="row-block">
+                                <div class="Order-info Order-info_delivery">
+                                    <div class="Order-infoType">Тип доставки:
+                                    </div>
+                                    <div class="Order-infoContent">
+                                        {% if order.delivery_type == "ordinary" %}
+                                            <div class="Order-infoContent">Обычная доставка</div>
+                                        {% elif order.delivery_type == "express" %}
+                                            <div class="Order-infoContent">Экспресс-доставка</div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="Order-info Order-info_pay">
+                                    <div class="Order-infoType">Оплата:
+                                    </div>
+                                    <div class="Order-infoContent">{{ order.payment_type.get_type_display }}
+                                    </div>
+                                </div>
+                                <div class="Order-info">
+                                    <div class="Order-infoType">Общая стоимость:
+                                    </div>
+                                    <div class="Order-infoContent"><span
+                                            class="Order-price">{{ order.total_price|add:order.delivery_price|intcomma }}&nbsp;Р.</span>
+                                    </div>
+                                </div>
+                                <div class="Order-info Order-info_status">
+                                    <div class="Order-infoType">Статус:
+                                    </div>
+                                    <div class="Order-infoContent">{{ order.get_status_display }}
+                                    </div>
+                                </div>
+                                {% if order.payment_status %}
+                                    <div class="Order-info">
+                                        <div class="Order-infoType">Детали:
+                                        </div>
+                                        <div class="{% if order.payment_status == "OK" %}Order-infoContent-success{% else %}Order-infoContent-error{% endif %}">{{ order.get_payment_status_display }}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <h3>У вас пока не было ни одного заказа.</h3>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

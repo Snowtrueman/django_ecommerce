@@ -1,0 +1,40 @@
+{% extends "app_goods/base.html" %}
+{% block main %}
+
+    <div class="Middle-top">
+        <div class="wrap">
+            <div class="Middle-header">
+                <h1 class="Middle-title">Регистрация
+                </h1>
+                <ul class="breadcrumbs Middle-breadcrumbs">
+                    <li class="breadcrumbs-item"><a href="{% url 'main' %}">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-item breadcrumbs-item_current"><span>Регистрация</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="Section">
+        <div class="wrap">
+            {% if errors %}
+                <p>{{ errors }}</p>
+            {% endif %}
+            <form class="form Payment" method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        <label class="form-label">{{ field.label_tag }}</label>
+                        {{ field.errors }}
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <div class="form-group">
+                    <button class="btn btn_success" type="submit">Зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

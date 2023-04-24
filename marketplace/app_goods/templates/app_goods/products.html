@@ -1,0 +1,249 @@
+{% extends "app_goods/base.html" %}
+{% load static %}
+{% load humanize %}
+{% load templatetags %}
+{% block main %}
+    <div class="Middle Middle_top">
+        <div class="Middle-top">
+            <div class="wrap">
+                <div class="Middle-header">
+                    <h1 class="Middle-title">Каталог |
+                        {% if category_name %}{{ category_name.title }}{% else %} Поиск {% endif %}
+                    </h1>
+                    <ul class="breadcrumbs Middle-breadcrumbs">
+                        <li class="breadcrumbs-item"><a href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs-item breadcrumbs-item_current"><span>Каталог</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Section Section_column Section_columnLeft">
+            <div class="wrap">
+                <div class="Section-column">
+                    <div class="Section-columnSection">
+                        <header class="Section-header">
+                            <strong class="Section-title">Фильтр
+                            </strong>
+                        </header>
+                        <div class="Section-columnContent">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {% if message|stringformat:"s" == "successfully_added" %}
+                                        <script type="text/javascript">
+
+                                            window.addEventListener("load", function () {
+                                                new Toast({
+                                                    title: false,
+                                                    text: "Товар успешно добавлен в корзину",
+                                                    theme: "success",
+                                                    autohide: true,
+                                                    interval: 2000
+                                                });
+                                            }, false);
+                                        </script>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            <script type="text/javascript">
+                                window.addEventListener("load", function () {
+                                    document.getElementById('form').addEventListener('submit', function () {
+                                        Array.prototype.forEach.call(this.elements, function (el) {
+                                            el.disabled = el.value == '';
+                                        });
+                                    }, false);
+                                }, false);
+                            </script>
+                            <form class="form" id="form" action="" method="get" id="filterform">
+                                <div class="form-group">
+                                    <div class="range Section-columnRange">
+
+                                        <input class="range-line" id="price" name="price" type="text" data-type="double"
+                                               data-min="10"
+                                               data-max="1000000"
+                                               data-from="{% get_min_price request %}"
+                                               data-to="{% get_max_price request %}"/>
+                                        <div class="range-price">Цена:&#32;
+                                            <div class="rangePrice">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-input form-input_full" id="title" name="title" type="text"
+                                            {% if request.GET.title %}
+                                           value="{{ request.GET.title }}" />
+                                            {% else %}
+                                                placeholder="Название"/>
+                                            {% endif %}
+                                </div>
+                                {% for filter in filters %}
+                                    <div class="form-group">
+                                        <select class="form-input form-input_full" name="param_{{ filter.pk }}">
+                                            <option class="form-input form-input_full"
+                                                    value="">{{ filter.name }}</option>
+                                            {% for value in filter.values.all %}
+                                                {% receive_get_param request filter.pk as get_param %}
+                                                <option class="form-input form-input_full" value="{{ value.value|urlencode }}"
+                                                        {% if get_param == value.value %}
+                                                        selected="selected"
+                                                        {% endif %}
+                                                >
+                                                    {{ value.value }}
+                                                </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                {% endfor %}
+                                <div class="form-group">
+                                    <input type="hidden" name="tag" {% if request.GET.tag %}
+                                           value="{{ request.GET.tag }}"{% endif %}/>
+                                    <!-- - var options = setOptions(items, ['value', 'selected', 'disabled']);-->
+                                </div>
+                                <div class="form-group">
+                                    <label class="toggle">
+                                        <input type="checkbox" name="available" value="available"
+                                                {% if request.GET.available %}
+                                               checked="checked"
+                                                {% endif %}
+                                        />
+                                        <span class="toggle-box"></span>
+                                        <span class="toggle-text">Только товары в наличии</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="toggle">
+                                        <input type="checkbox" name="free_delivery" value="free_delivery"
+                                                {% if request.GET.free_delivery %}
+                                               checked="checked"
+                                                {% endif %}
+                                        />
+                                        <span class="toggle-box"></span>
+                                        <span class="toggle-text">С бесплатной доставкой</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="buttons">
+                                        <button type="submit" id="filter_button"
+                                                class="btn btn_square btn_dark btn_narrow"
+                                                href="#">Найти
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    {% if tags %}
+                        <div class="Section-columnSection">
+                            <header class="Section-header">
+                                <strong class="Section-title">Популярные теги
+                                </strong>
+                            </header>
+                            <div class="Section-columnContent">
+                                <div class="buttons">
+                                    {% for tag in tags %}
+                                        {% if request.GET.tag == tag.pk|stringformat:"i" %}
+                                            <a class="btn btn_default btn_sm  tag_selected"
+                                               href="{% url 'products' category_slug %}">{{ tag.name }}</a>
+                                        {% else %}
+                                            <a class="btn btn_default btn_sm"
+                                               href="{% url 'products' category_slug %}?tag={{ tag.pk }}">{{ tag.name }}</a>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="Section-content">
+                    <div class="Sort">
+                        <div class="Sort-title">Сортировать по:
+                        </div>
+                        {% if "?" in request.get_full_path %}
+                            {% define "&" as action %}
+                        {% else %}
+                            {% define "?" as action %}
+                        {% endif %}
+                        <div class="Sort-variants">
+                            <a class="Sort-sortBy {% make_order_by_class 'popularity' current_ordering ordering_method %}"
+                               href="{% make_order_by_url request.get_full_path 'popularity' current_ordering ordering_method %}">Популярности</a>
+
+                            <a class="Sort-sortBy {% make_order_by_class 'price' current_ordering ordering_method %}"
+                               href="{% make_order_by_url request.get_full_path 'price' current_ordering ordering_method %}">Цене</a>
+
+                            <a class="Sort-sortBy {% make_order_by_class 'reviews' current_ordering ordering_method %}"
+                               href="{% make_order_by_url request.get_full_path 'reviews' current_ordering ordering_method %}">Отзывам</a>
+                            <a class="Sort-sortBy {% make_order_by_class 'update' current_ordering ordering_method %}"
+                               href="{% make_order_by_url request.get_full_path 'update' current_ordering ordering_method %}">Новизне</a>
+                        </div>
+                    </div>
+                    <div class="Cards">
+                        {% if goods %}
+                            {% for good in goods %}
+                                <div class="Card"><a class="Card-picture" href="{{ good.get_absolute_url }}"><img
+                                        src="{{ good.images.first.img.url }}"
+                                        alt="card.jpg"/></a>
+                                    <div class="Card-content">
+                                        <strong class="Card-title"><a
+                                                href="{{ good.get_absolute_url }}">{{ good.title }}</a>
+                                        </strong>
+                                        <div class="Card-description">
+                                            <div class="Card-cost"><span
+                                                    class="Card-price">{{ good.price|intcomma }} Р.</span>
+                                            </div>
+                                            <div class="Card-category">
+                                                {% if good.category.parent %}
+                                                    {{ good.category.parent }} /
+                                                {% endif %}
+                                                {{ good.category }}
+                                            </div>
+                                            <div class="Card-hover">
+                                                <a class="Card-btn" href="{% url 'cart-edit' good.pk 'add' %}">
+                                                    <img src="{% static 'app_goods/assets/img/icons/card/cart.svg' %}"
+                                                         alt="cart.svg"/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    {% if goods %}
+                        <div class="Pagination">
+                            <div class="Pagination-ins">
+                                {% if page_obj.has_previous %}
+                                    <a class="Pagination-element Pagination-element_prev"
+                                       href="{% make_pagination_url request.get_full_path page_obj.previous_page_number %}">
+                                        <img src="{% static 'app_goods/assets/img/icons/prevPagination.svg' %}"
+                                             alt="prevPagination.svg"/>
+                                    </a>
+                                {% endif %}
+                                {% for p in paginator.page_range %}
+                                    {% if page_obj.number == p %}
+                                        <a class="Pagination-element Pagination-element_current"
+                                           href="{% make_pagination_url request.get_full_path p %}">
+                                        <span class="Pagination-text">{{ p }}</span>
+                                    {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+                                        <a class="Pagination-element "
+                                           href="{% make_pagination_url request.get_full_path p %}">
+                                        <span class="Pagination-text">{{ p }}</span>
+                                    {% endif %}
+                                </a>
+                                {% endfor %}
+                                {% if page_obj.has_next %}
+                                    <a class="Pagination-element Pagination-element_prev"
+                                       href="{% make_pagination_url request.get_full_path page_obj.next_page_number %}">
+                                        <img src="{% static 'app_goods/assets/img/icons/nextPagination.svg' %}"
+                                             alt="nextPagination.svg"/>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

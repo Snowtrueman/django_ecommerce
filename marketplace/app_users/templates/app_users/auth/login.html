@@ -1,0 +1,50 @@
+{% extends "app_goods/base.html" %}
+{% block main %}
+
+    <div class="Middle-top">
+        <div class="wrap">
+            <div class="Middle-header">
+                <h1 class="Middle-title">Вход
+                </h1>
+                <ul class="breadcrumbs Middle-breadcrumbs">
+                    <li class="breadcrumbs-item"><a href="{% url 'main' %}">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-item breadcrumbs-item_current"><span>Вход</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="Section">
+        <div class="wrap">
+
+            <form class="form Payment" method="post" action="{% url 'login' %}">
+                {% if form.errors %}
+                    <p style="color: #f26d7d;">Введённая пара логин/пароль некорректна. Попробуйте ещё раз.</p>
+                {% endif %}
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="form-label">Имя пользователя</label>
+                    <input class="form-input" type="text" name="username" maxlength="50" id="id_username">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Пароль</label>
+                    <input class="form-input" type="password" name="password" maxlength="50" id="id_password">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn_success" type="submit">Вход</button>
+                </div>
+                <div class="form-group">
+                    <a class="btn btn_primary" href="{% url 'register' %}">Регистрация</a>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn_success" type="hidden" name="next" value="{{ next }}">
+                </div>
+                <p><a href="{% url 'password-reset' %}">Забыли пароль?</a></p>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

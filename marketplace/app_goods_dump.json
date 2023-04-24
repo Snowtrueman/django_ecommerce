@@ -1,0 +1,3188 @@
+[
+  {
+    "model": "app_goods.categories",
+    "pk": 1,
+    "fields": {
+      "deleted_at": null,
+      "title": "ПК и ноутбуки",
+      "is_active": true,
+      "sort_index": 1,
+      "icon": "category_pictures/pc_laptop.svg",
+      "parent": null,
+      "slug": "pk-i-noutbuki",
+      "selected": false,
+      "img": "categories/Collection.png"
+    }
+  },
+  {
+    "model": "app_goods.categories",
+    "pk": 2,
+    "fields": {
+      "deleted_at": null,
+      "title": "ПК",
+      "is_active": true,
+      "sort_index": 1,
+      "icon": "category_pictures/pc_laptop_d21inzi.svg",
+      "parent": 1,
+      "slug": "pk",
+      "selected": false,
+      "img": "categories/pc.png"
+    }
+  },
+  {
+    "model": "app_goods.categories",
+    "pk": 3,
+    "fields": {
+      "deleted_at": null,
+      "title": "Ноутбуки",
+      "is_active": true,
+      "sort_index": 1,
+      "icon": "category_pictures/pc_laptop_8ry2UXl.svg",
+      "parent": 1,
+      "slug": "noutbuki",
+      "selected": false,
+      "img": "categories/Collection_J8zmw9b.png"
+    }
+  },
+  {
+    "model": "app_goods.categories",
+    "pk": 4,
+    "fields": {
+      "deleted_at": null,
+      "title": "Смартфоны",
+      "is_active": true,
+      "sort_index": 1,
+      "icon": "category_pictures/mobile.svg",
+      "parent": null,
+      "slug": "smartfony",
+      "selected": false,
+      "img": "categories/smartphone.jpg"
+    }
+  },
+  {
+    "model": "app_goods.categories",
+    "pk": 5,
+    "fields": {
+      "deleted_at": null,
+      "title": "Фототехника",
+      "is_active": true,
+      "sort_index": 1,
+      "icon": "category_pictures/photo.svg",
+      "parent": null,
+      "slug": "fototehnika",
+      "selected": false,
+      "img": "categories/photo.png"
+    }
+  },
+  {
+    "model": "app_goods.categories",
+    "pk": 6,
+    "fields": {
+      "deleted_at": null,
+      "title": "Кофе и чай",
+      "is_active": true,
+      "sort_index": 1,
+      "icon": "category_pictures/coffee_nashine.svg",
+      "parent": null,
+      "slug": "kofe-i-chaj",
+      "selected": false,
+      "img": "categories/teaandcoffee.png"
+    }
+  },
+  {
+    "model": "app_goods.categories",
+    "pk": 7,
+    "fields": {
+      "deleted_at": null,
+      "title": "Кофеварки",
+      "is_active": true,
+      "sort_index": 1,
+      "icon": "category_pictures/coffee_nashine_EcAPzDS.svg",
+      "parent": 6,
+      "slug": "kofevarki",
+      "selected": false,
+      "img": "categories/coffee.jpg"
+    }
+  },
+  {
+    "model": "app_goods.categories",
+    "pk": 8,
+    "fields": {
+      "deleted_at": null,
+      "title": "Чайники",
+      "is_active": true,
+      "sort_index": 1,
+      "icon": "category_pictures/teapot.svg",
+      "parent": 6,
+      "slug": "chajniki",
+      "selected": false,
+      "img": "categories/tea.png"
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 1,
+    "fields": {
+      "deleted_at": null,
+      "name": "Процессор",
+      "category": 2,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 2,
+    "fields": {
+      "deleted_at": null,
+      "name": "Оперативная память",
+      "category": 2,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 3,
+    "fields": {
+      "deleted_at": null,
+      "name": "Видеокарта",
+      "category": 2,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 4,
+    "fields": {
+      "deleted_at": null,
+      "name": "SSD",
+      "category": 2,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 5,
+    "fields": {
+      "deleted_at": null,
+      "name": "HDD",
+      "category": 2,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 6,
+    "fields": {
+      "deleted_at": null,
+      "name": "USB порты",
+      "category": 2,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 7,
+    "fields": {
+      "deleted_at": null,
+      "name": "Беспроводной интерфейс",
+      "category": 2,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 8,
+    "fields": {
+      "deleted_at": null,
+      "name": "Процессор",
+      "category": 3,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 9,
+    "fields": {
+      "deleted_at": null,
+      "name": "Оперативная память",
+      "category": 3,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 10,
+    "fields": {
+      "deleted_at": null,
+      "name": "SSD",
+      "category": 3,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 11,
+    "fields": {
+      "deleted_at": null,
+      "name": "HDD",
+      "category": 3,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 12,
+    "fields": {
+      "deleted_at": null,
+      "name": "Разрешение экрана",
+      "category": 3,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 13,
+    "fields": {
+      "deleted_at": null,
+      "name": "Диагональ экрана (дюйм)",
+      "category": 3,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 14,
+    "fields": {
+      "deleted_at": null,
+      "name": "Беспроводной интерфейс",
+      "category": 3,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 15,
+    "fields": {
+      "deleted_at": null,
+      "name": "Материал корпуса",
+      "category": 3,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 16,
+    "fields": {
+      "deleted_at": null,
+      "name": "Диагональ экрана (дюйм)",
+      "category": 4,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 17,
+    "fields": {
+      "deleted_at": null,
+      "name": "Разрешение экрана",
+      "category": 4,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 18,
+    "fields": {
+      "deleted_at": null,
+      "name": "Плотность пикселей",
+      "category": 4,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 19,
+    "fields": {
+      "deleted_at": null,
+      "name": "Операционная система",
+      "category": 4,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 20,
+    "fields": {
+      "deleted_at": null,
+      "name": "Количество физических SIM-карт",
+      "category": 4,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 21,
+    "fields": {
+      "deleted_at": null,
+      "name": "Поддержка сетей 5G",
+      "category": 4,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 22,
+    "fields": {
+      "deleted_at": null,
+      "name": "Материал корпуса",
+      "category": 4,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 23,
+    "fields": {
+      "deleted_at": null,
+      "name": "Общее число мегапикселей матрицы",
+      "category": 5,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 24,
+    "fields": {
+      "deleted_at": null,
+      "name": "Тип матрицы",
+      "category": 5,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 25,
+    "fields": {
+      "deleted_at": null,
+      "name": "Максимальное разрешение",
+      "category": 5,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 26,
+    "fields": {
+      "deleted_at": null,
+      "name": "Максимальная чувствительность (ISO)",
+      "category": 5,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 27,
+    "fields": {
+      "deleted_at": null,
+      "name": "Объектив в комплекте",
+      "category": 5,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 28,
+    "fields": {
+      "deleted_at": null,
+      "name": "Видоискатель с окуляром",
+      "category": 5,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 29,
+    "fields": {
+      "deleted_at": null,
+      "name": "Поддержка 4K",
+      "category": 5,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 30,
+    "fields": {
+      "deleted_at": null,
+      "name": "Объем",
+      "category": 8,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 31,
+    "fields": {
+      "deleted_at": null,
+      "name": "Мощность",
+      "category": 8,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 32,
+    "fields": {
+      "deleted_at": null,
+      "name": "Материал корпуса",
+      "category": 8,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 33,
+    "fields": {
+      "deleted_at": null,
+      "name": "Поддержание температуры",
+      "category": 8,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 34,
+    "fields": {
+      "deleted_at": null,
+      "name": "Объем",
+      "category": 7,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 35,
+    "fields": {
+      "deleted_at": null,
+      "name": "Мощность",
+      "category": 7,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 36,
+    "fields": {
+      "deleted_at": null,
+      "name": "Используемый кофе",
+      "category": 7,
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.params",
+    "pk": 37,
+    "fields": {
+      "deleted_at": null,
+      "name": "Фильтр",
+      "category": 7,
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 1,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "param": 1,
+      "value": "Apple M2"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 2,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "param": 2,
+      "value": "8 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 3,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "param": 3,
+      "value": "Apple M2 10-core"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 4,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "param": 4,
+      "value": "512 GB M.2 PCIe"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 5,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "param": 6,
+      "value": "Thunderbolt 4 Type-C x2, USB 3.2 Gen2 Type A x2"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 6,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "param": 7,
+      "value": "Bluetooth 5.3, WI-FI 6E (802.11ax)"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 7,
+    "fields": {
+      "deleted_at": null,
+      "good": 2,
+      "param": 1,
+      "value": "Ryzen 5 5600G"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 8,
+    "fields": {
+      "deleted_at": null,
+      "good": 2,
+      "param": 2,
+      "value": "16 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 9,
+    "fields": {
+      "deleted_at": null,
+      "good": 2,
+      "param": 3,
+      "value": "GeForce RTX 3060"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 10,
+    "fields": {
+      "deleted_at": null,
+      "good": 2,
+      "param": 4,
+      "value": "1 TB M.2 PCIe"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 11,
+    "fields": {
+      "deleted_at": null,
+      "good": 2,
+      "param": 6,
+      "value": "USB 2.0 Type-A x4, USB 3.2 Gen1 Type-A, USB 3.2 Gen1 Type-C, USB 3.2 Gen2 Type A"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 12,
+    "fields": {
+      "deleted_at": null,
+      "good": 2,
+      "param": 7,
+      "value": "Bluetooth 5.0, WI-FI 6 (802.11ax)"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 13,
+    "fields": {
+      "deleted_at": null,
+      "good": 3,
+      "param": 1,
+      "value": "Core i5-11400F"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 14,
+    "fields": {
+      "deleted_at": null,
+      "good": 3,
+      "param": 2,
+      "value": "16 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 15,
+    "fields": {
+      "deleted_at": null,
+      "good": 3,
+      "param": 3,
+      "value": "GeForce RTX 3080"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 16,
+    "fields": {
+      "deleted_at": null,
+      "good": 3,
+      "param": 4,
+      "value": "1 TB M.2 PCIe"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 17,
+    "fields": {
+      "deleted_at": null,
+      "good": 3,
+      "param": 6,
+      "value": "USB 2.0 Type-A x6, USB 3.2 Gen1 Type-A x2, USB 3.2 Gen2 Type A x2"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 18,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "param": 8,
+      "value": "Apple M2 Pro"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 19,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "param": 9,
+      "value": "16 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 20,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "param": 10,
+      "value": "1 ТБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 21,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "param": 12,
+      "value": "3456x2234"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 22,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "param": 13,
+      "value": "16.2\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 23,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "param": 14,
+      "value": "Bluetooth 5.3, WI-FI 6E (802.11ax)"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 24,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "param": 15,
+      "value": "Алюминий"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 25,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "param": 8,
+      "value": "Intel Core i7-12650H"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 26,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "param": 9,
+      "value": "16 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 27,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "param": 10,
+      "value": "512 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 28,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "param": 12,
+      "value": "1920x1080"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 29,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "param": 13,
+      "value": "15.6\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 30,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "param": 14,
+      "value": "Bluetooth 5.2, WI-FI 6 (802.11ax)"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 31,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "param": 15,
+      "value": "Алюминий/пластик"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 32,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "param": 8,
+      "value": "Intel Core i7-1255U"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 33,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "param": 9,
+      "value": "16 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 34,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "param": 10,
+      "value": "512 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 35,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "param": 12,
+      "value": "1920x1200"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 36,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "param": 13,
+      "value": "14\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 37,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "param": 14,
+      "value": "Bluetooth 5.1, WI-FI 6 (802.11ax)"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 38,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "param": 15,
+      "value": "Алюминий"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 39,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "param": 8,
+      "value": "Apple M1"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 40,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "param": 9,
+      "value": "8 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 41,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "param": 10,
+      "value": "256 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 42,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "param": 12,
+      "value": "2560x1600"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 43,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "param": 13,
+      "value": "13.3\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 44,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "param": 14,
+      "value": "Bluetooth 5.0, WI-FI 6 (802.11ax)"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 45,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "param": 15,
+      "value": "Алюминий"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 46,
+    "fields": {
+      "deleted_at": null,
+      "good": 8,
+      "param": 8,
+      "value": "AMD Ryzen 7 5800H"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 47,
+    "fields": {
+      "deleted_at": null,
+      "good": 8,
+      "param": 9,
+      "value": "16 ГБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 48,
+    "fields": {
+      "deleted_at": null,
+      "good": 8,
+      "param": 10,
+      "value": "1 ТБ"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 49,
+    "fields": {
+      "deleted_at": null,
+      "good": 8,
+      "param": 12,
+      "value": "2880x1800"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 50,
+    "fields": {
+      "deleted_at": null,
+      "good": 8,
+      "param": 13,
+      "value": "14\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 51,
+    "fields": {
+      "deleted_at": null,
+      "good": 8,
+      "param": 14,
+      "value": "Bluetooth 5.0, WI-FI 6 (802.11ax)"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 52,
+    "fields": {
+      "deleted_at": null,
+      "good": 8,
+      "param": 15,
+      "value": "Алюминий"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 53,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "param": 16,
+      "value": "6.7\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 54,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "param": 17,
+      "value": "2796x1290"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 55,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "param": 18,
+      "value": "460 ppi"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 56,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "param": 19,
+      "value": "iOS"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 57,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "param": 20,
+      "value": "1"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 58,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "param": 21,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 59,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "param": 22,
+      "value": "металл/стекло"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 60,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "param": 16,
+      "value": "6.7\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 61,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "param": 17,
+      "value": "2796x1290"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 62,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "param": 18,
+      "value": "460 ppi"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 63,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "param": 19,
+      "value": "iOS"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 64,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "param": 20,
+      "value": "1"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 65,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "param": 21,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 66,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "param": 22,
+      "value": "металл/стекло"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 67,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "param": 16,
+      "value": "6.7\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 68,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "param": 17,
+      "value": "2796x1290"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 69,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "param": 18,
+      "value": "460 ppi"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 70,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "param": 19,
+      "value": "iOS"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 71,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "param": 20,
+      "value": "1"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 72,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "param": 21,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 73,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "param": 22,
+      "value": "металл/стекло"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 74,
+    "fields": {
+      "deleted_at": null,
+      "good": 12,
+      "param": 16,
+      "value": "6.8\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 75,
+    "fields": {
+      "deleted_at": null,
+      "good": 12,
+      "param": 17,
+      "value": "3088x1440"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 76,
+    "fields": {
+      "deleted_at": null,
+      "good": 12,
+      "param": 18,
+      "value": "500 ppi"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 77,
+    "fields": {
+      "deleted_at": null,
+      "good": 12,
+      "param": 19,
+      "value": "Android"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 78,
+    "fields": {
+      "deleted_at": null,
+      "good": 12,
+      "param": 20,
+      "value": "2"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 79,
+    "fields": {
+      "deleted_at": null,
+      "good": 12,
+      "param": 21,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 80,
+    "fields": {
+      "deleted_at": null,
+      "good": 12,
+      "param": 22,
+      "value": "металл/стекло"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 81,
+    "fields": {
+      "deleted_at": null,
+      "good": 13,
+      "param": 16,
+      "value": "6.6\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 82,
+    "fields": {
+      "deleted_at": null,
+      "good": 13,
+      "param": 17,
+      "value": "2340x1080"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 83,
+    "fields": {
+      "deleted_at": null,
+      "good": 13,
+      "param": 18,
+      "value": "393 ppi"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 84,
+    "fields": {
+      "deleted_at": null,
+      "good": 13,
+      "param": 19,
+      "value": "Android"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 85,
+    "fields": {
+      "deleted_at": null,
+      "good": 13,
+      "param": 20,
+      "value": "2"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 86,
+    "fields": {
+      "deleted_at": null,
+      "good": 13,
+      "param": 21,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 87,
+    "fields": {
+      "deleted_at": null,
+      "good": 13,
+      "param": 22,
+      "value": "металл/стекло"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 88,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "param": 16,
+      "value": "6.7\""
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 89,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "param": 17,
+      "value": "2400x1080"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 90,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "param": 18,
+      "value": "394 ppi"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 91,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "param": 19,
+      "value": "Android"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 92,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "param": 20,
+      "value": "2"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 93,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "param": 21,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 94,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "param": 22,
+      "value": "металл/стекло"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 95,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "param": 23,
+      "value": "47.1 Мп"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 96,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "param": 24,
+      "value": "CMOS"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 97,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "param": 25,
+      "value": "8192х5464"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 98,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "param": 26,
+      "value": "51200"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 99,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "param": 27,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 100,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "param": 28,
+      "value": "электронный"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 101,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "param": 29,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 102,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "param": 23,
+      "value": "46.89 Мп"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 103,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "param": 24,
+      "value": "CMOS"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 104,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "param": 25,
+      "value": "8256 x 5504"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 105,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "param": 26,
+      "value": "25600"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 106,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "param": 27,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 107,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "param": 28,
+      "value": "электронный"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 108,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "param": 29,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 109,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "param": 23,
+      "value": "25.3 Мп"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 110,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "param": 24,
+      "value": "CMOS"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 111,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "param": 25,
+      "value": "6000 x 4000"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 112,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "param": 26,
+      "value": "51200"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 113,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "param": 27,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 114,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "param": 28,
+      "value": "электронный"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 115,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "param": 29,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 116,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "param": 23,
+      "value": "25.3 Мп"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 117,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "param": 24,
+      "value": "CMOS"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 118,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "param": 25,
+      "value": "6000 x 4000"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 119,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "param": 26,
+      "value": "51200"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 120,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "param": 27,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 121,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "param": 28,
+      "value": "электронный"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 122,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "param": 29,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 123,
+    "fields": {
+      "deleted_at": null,
+      "good": 19,
+      "param": 30,
+      "value": "1.7 л"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 124,
+    "fields": {
+      "deleted_at": null,
+      "good": 19,
+      "param": 31,
+      "value": "2400 Вт"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 125,
+    "fields": {
+      "deleted_at": null,
+      "good": 19,
+      "param": 32,
+      "value": "нержавеющая сталь"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 126,
+    "fields": {
+      "deleted_at": null,
+      "good": 19,
+      "param": 33,
+      "value": "есть"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 127,
+    "fields": {
+      "deleted_at": null,
+      "good": 20,
+      "param": 30,
+      "value": "1.7 л"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 128,
+    "fields": {
+      "deleted_at": null,
+      "good": 20,
+      "param": 31,
+      "value": "2400 Вт"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 129,
+    "fields": {
+      "deleted_at": null,
+      "good": 20,
+      "param": 32,
+      "value": "нержавеющая сталь"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 130,
+    "fields": {
+      "deleted_at": null,
+      "good": 20,
+      "param": 33,
+      "value": "нет"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 131,
+    "fields": {
+      "deleted_at": null,
+      "good": 21,
+      "param": 30,
+      "value": "1.7 л"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 132,
+    "fields": {
+      "deleted_at": null,
+      "good": 21,
+      "param": 31,
+      "value": "2200 Вт"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 133,
+    "fields": {
+      "deleted_at": null,
+      "good": 21,
+      "param": 32,
+      "value": "термостойкое стекло"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 134,
+    "fields": {
+      "deleted_at": null,
+      "good": 21,
+      "param": 33,
+      "value": "нет"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 135,
+    "fields": {
+      "deleted_at": null,
+      "good": 22,
+      "param": 34,
+      "value": "1.25 л"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 136,
+    "fields": {
+      "deleted_at": null,
+      "good": 22,
+      "param": 35,
+      "value": "1400 Вт"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 137,
+    "fields": {
+      "deleted_at": null,
+      "good": 22,
+      "param": 36,
+      "value": "молотый"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 138,
+    "fields": {
+      "deleted_at": null,
+      "good": 22,
+      "param": 37,
+      "value": "пластиковый"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 139,
+    "fields": {
+      "deleted_at": null,
+      "good": 23,
+      "param": 34,
+      "value": "1.25 л"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 140,
+    "fields": {
+      "deleted_at": null,
+      "good": 23,
+      "param": 35,
+      "value": "1200 Вт"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 141,
+    "fields": {
+      "deleted_at": null,
+      "good": 23,
+      "param": 36,
+      "value": "молотый"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 142,
+    "fields": {
+      "deleted_at": null,
+      "good": 23,
+      "param": 37,
+      "value": "пластиковый"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 143,
+    "fields": {
+      "deleted_at": null,
+      "good": 24,
+      "param": 34,
+      "value": "1.3 л"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 144,
+    "fields": {
+      "deleted_at": null,
+      "good": 24,
+      "param": 35,
+      "value": "1000 Вт"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 145,
+    "fields": {
+      "deleted_at": null,
+      "good": 24,
+      "param": 36,
+      "value": "молотый"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 146,
+    "fields": {
+      "deleted_at": null,
+      "good": 24,
+      "param": 37,
+      "value": "пластиковый"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 147,
+    "fields": {
+      "deleted_at": null,
+      "good": 25,
+      "param": 34,
+      "value": "1.25 л"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 148,
+    "fields": {
+      "deleted_at": null,
+      "good": 25,
+      "param": 35,
+      "value": "1000 Вт"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 149,
+    "fields": {
+      "deleted_at": null,
+      "good": 25,
+      "param": 36,
+      "value": "молотый"
+    }
+  },
+  {
+    "model": "app_goods.paramvalues",
+    "pk": 150,
+    "fields": {
+      "deleted_at": null,
+      "good": 25,
+      "param": 37,
+      "value": "нейлоновый"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 1,
+    "fields": {
+      "name": "ПК"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 2,
+    "fields": {
+      "name": "ноутбуки"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 3,
+    "fields": {
+      "name": "фото"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 4,
+    "fields": {
+      "name": "смартфоны"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 5,
+    "fields": {
+      "name": "apple"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 6,
+    "fields": {
+      "name": "samsung"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 7,
+    "fields": {
+      "name": "asus"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 8,
+    "fields": {
+      "name": "lenovo"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 9,
+    "fields": {
+      "name": "bosh"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 10,
+    "fields": {
+      "name": "tefal"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 11,
+    "fields": {
+      "name": "кофеварки"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 12,
+    "fields": {
+      "name": "чайники"
+    }
+  },
+  {
+    "model": "app_goods.tags",
+    "pk": 13,
+    "fields": {
+      "name": "кофе и чай"
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 1,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Apple Mac mini",
+      "short_description": "Неттоп Apple Mac mini 2023",
+      "description": "Неттоп Apple Mac mini 2023 – компактный компьютер, который существенно сэкономит место на рабочем столе без ущерба функциональности и производительности.",
+      "price": "93999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": true,
+      "is_published": true,
+      "date_published": "2023-04-15",
+      "category": 2,
+      "tags": [
+        5,
+        1
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 2,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Lenovo IdeaCentre Gaming 5",
+      "short_description": "Персональный компьютер Lenovo IdeaCentre Gaming 5",
+      "description": "Если вам нужен занимающий минимум пространства стационарный компьютер, то Lenovo IdeaCentre Gaming 5 14ACN6 наверняка станет для вас отличным выбором.",
+      "price": "94799.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 2,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-15",
+      "category": 2,
+      "tags": [
+        8,
+        1
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 3,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "ASUS ROG Strix",
+      "short_description": "Игрокой ПК ASUS ROG Strix",
+      "description": "Боевая станция Asus G15CE – весомое преимущество в киберспортивных дисциплинах. Разработанный специально для того, чтобы обеспечить максимально плавную игровую картинку, этот компактный компьютер обладает мощной конфигурацией, в которую входит видеокарта NVIDIA GeForce и процессор Intel Core 11 поколения.",
+      "price": "161999.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-15",
+      "category": 2,
+      "tags": [
+        7,
+        1
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 4,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "16.2\" Ноутбук Apple MacBook Pro",
+      "short_description": "Ноутбук Apple MacBook Pro 16.2\"",
+      "description": "Apple MacBook Pro 16 2023 - идеально подходит для профессионалов в любых областях и сферах. Он сделает вашу работу более продуктивной за счет повышенной производительности, времени автономной работы и возможностей подключения.",
+      "price": "281999.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": true,
+      "is_published": true,
+      "date_published": "2023-04-15",
+      "category": 3,
+      "tags": [
+        5,
+        2
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 5,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "15.6\" Ноутбук ASUS TUF Dash F15",
+      "short_description": "Игровой ноутбук ASUS TUF Dash F15 15.6\"",
+      "description": "Этот ноутбук создан для тех, кто хочет получить качественное и производительное компьютерное устройство с наиболее востребованным функционалом. Данная модель полностью удовлетворяет данные требования. Надежный накопитель предоставляет вам возможности для долговременного хранения необходимой виртуальной информации. Устройство оборудовано веб-камерой и микрофоном, благодаря которым вы сможете организовывать видеоконференции с партнерами по бизнесу и коллегами по работе.",
+      "price": "156999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 3,
+      "tags": [
+        7,
+        2
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 6,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "14\" Ноутбук Lenovo ThinkBook 14 G4+",
+      "short_description": "Ноутбук Lenovo ThinkBook 14 G4+ 14\"",
+      "description": "Ноутбук Lenovo ThinkBook 14 G4+ IAP демонстрирует высокую производительность благодаря присутствию в аппаратной части 10-ядерного процессорного чипа Intel Core i7-1255U и 16 ГБ оперативной памяти LPDDR5. Такая конфигурация позволяет устройству безупречно справляться с любыми сценариями использования, включая многозадачный режим работы и запуск ресурсоемких приложений. Еще одним достоинством этой модели является литий-полимерный аккумулятор емкостью 46.5 Вт*ч, гарантирующий длительную автономную работу на протяжении многих часов без необходимости подзарядки.",
+      "price": "129999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-15",
+      "category": 3,
+      "tags": [
+        8,
+        2
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 7,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "13.3\" Ноутбук Apple MacBook Air",
+      "short_description": "Ноутбук Apple MacBook Air 13.3\" серый",
+      "description": "Ноутбук Apple MacBook Air разработан с учетом динамичного образа жизни. Он предлагает широкие возможности для решения повседневных задач. Достаточно высокая производительность достигается благодаря процессору Apple M1 с 8 ядрами, 8 ГБ памяти ОЗУ и накопителю SSD 256 ГБ. На экране 13.3 дюйма IPS с разрешением 2560x1600 пикселей отображается четкая и красочная картинка.",
+      "price": "81899.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-15",
+      "category": 3,
+      "tags": [
+        5,
+        2
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 8,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "14\" Ноутбук ASUS ZenBook 14X OLED",
+      "short_description": "Ноутбук ASUS ZenBook 14X OLED 14\"",
+      "description": "Добавьте ярких красок всему, что вы делаете, с помощью Zenbook 14X OLED – изящного, легкого, компактного ноутбука, работающего на базе процессора AMD Ryzen 7 5800H. Среди его достоинств – тонкорамочный OLED-дисплей с великолепными характеристиками, эффективная двухвентиляторная система охлаждения IceCool Plus, раскрывающийся на 180° экранный шарнир ErgoLift и эксклюзивный тачпад NumberPad 2.0 с режимом цифровой клавиатуры.",
+      "price": "89999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": true,
+      "is_published": true,
+      "date_published": "2023-04-15",
+      "category": 3,
+      "tags": [
+        7,
+        2
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 9,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Apple iPhone 14 Pro Max 1 ТБ",
+      "short_description": "Смартфон Apple iPhone 14 Pro Max на 1000 гигабайт.",
+      "description": "Смартфон Apple iPhone 14 Pro Max на 1000 гигабайт защищен от пыли и влаги по стандарту IP68. Оснащен тремя тыловыми камерами и может снимать видео в формате 4К. Обладает 3-кратным оптическим зумом, а также 15-кратным цифровым.",
+      "price": "169299.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 4,
+      "tags": [
+        5,
+        4
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 10,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Apple iPhone 14 Pro Max 256 ГБ",
+      "short_description": "Смартфон Apple iPhone 14 Pro Max 256 ГБ",
+      "description": "У Apple iPhone 14 Pro Max 6,7-дюймовая панель. Пиковая яркость — 2000 нит. Используется небольшой вырез с датчиком фронтальной камеры и системой Face ID. Кроме того, он способен визуально уменьшаться и увеличиваться. Предусмотрен режим Always-on Display (экран всегда включен).\r\nАппаратная основа — A16 Bionic. Это 4-нм SoC с производительным GPU и дополнительным процессором Image Signal Proccessor для повышения качества снимков.\r\nТыльная камера iPhone 14 Pro Max тройная, на 48, 12 и 12 Мп. Ночью iPhone 14 Pro Max снимает в два раза лучше, чем iPhone 13 Pro. Селфи-камера на 12 Мп.",
+      "price": "125999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 4,
+      "tags": [
+        5,
+        4
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 11,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Apple iPhone 14 Pro Max 256 ГБ",
+      "short_description": "Смартфон Apple iPhone 14 Pro Max 256 ГБ",
+      "description": "У Apple iPhone 14 Pro Max 6,7-дюймовая панель. Пиковая яркость — 2000 нит. Используется небольшой вырез с датчиком фронтальной камеры и системой Face ID. Кроме того, он способен визуально уменьшаться и увеличиваться. Предусмотрен режим Always-on Display (экран всегда включен).\r\nАппаратная основа — A16 Bionic. Это 4-нм SoC с производительным GPU и дополнительным процессором Image Signal Proccessor для повышения качества снимков. Тыльная камера iPhone 14 Pro Max тройная, на 48, 12 и 12 Мп. Ночью iPhone 14 Pro Max снимает в два раза лучше, чем iPhone 13 Pro. Селфи-камера на 12 Мп.",
+      "price": "125999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 4,
+      "tags": [
+        5,
+        4
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 12,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Samsung Galaxy S23 Ultra 512 ГБ",
+      "short_description": "Смартфон Samsung Galaxy S23 Ultra 512 ГБ",
+      "description": "Смартфон Samsung Galaxy S23 Ultra основан на однокристальной системе Snapdragon 8 Gen 2, работает под управлением операционной системы Android 13. Модель получила угловатую форму корпуса, слегка изогнутый по краям дисплей с отверстием под селфи-камеру по центру и блок камер сзади.\r\nGalaxy S23 Ultra получил экран с диагональю 6,8 дюйма и разрешением 3088x1440. Главным фотодатчиком выступает 200-мегапиксельный ISOCELL HP2 с поддержкой OIS. Размер составляет 1/1.3\". Из других камер в наличии телевик (10 Мп, 3-кратный зум), перископический объектив (10 Мп) и сверхширик (12 Мп). Селфи-сенсор получил разрешение 12 Мп.",
+      "price": "119999.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": true,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 4,
+      "tags": [
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 13,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Samsung Galaxy S23+ 512 ГБ",
+      "short_description": "Смартфон Samsung Galaxy S23+ 512 ГБ",
+      "description": "Смартфон Samsung Galaxy S23+ основан на однокристальной системе Snapdragon 8 Gen 2, работает под управлением операционной системы Android 13. Модель имеет корпус со скруглёнными углами и тремя объективами на задней панели. \r\n\r\nСмартфон оснащен 6,6-дюймовой Dynamic AMOLED 2X-панелью с разрешением FHD+ и адаптивной частотой до 120 Гц. В качестве основной камеры установлена 50-мегапиксельный датчик, дополненный сверхшириком (12 Мп) и телефото (10 Мп). Спереди разместился фронтальный датчик на 12 Мп. \r\n\r\nУстройство комплектуется 8 ГБ оперативной и 512 ГБ постоянной памяти. За автономность отвечает батарея ёмкостью 4700 мАч с поддержкой 45-ваттной зарядки.",
+      "price": "97999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 4,
+      "tags": [
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 14,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Samsung Galaxy S21+ 128 ГБ",
+      "short_description": "Смартфон Samsung Galaxy S21+ 128 ГБ",
+      "description": "Смартфон Samsung Galaxy S21+ с диагональю 6.7\" представлен в черном корпусе. Это надежный аппарат с мощным аккумулятором: его емкости 4800 мА·ч будет достаточно для того, чтобы вы могли в течение дня не беспокоиться о необходимости зарядки устройства. Технология Dynamic AMOLED 2X, которую реализует экран, позволяет изображению получить разрешение 2240x1080: картинка получается реалистичной и четкой. Для хранения мультимедиа файлов используется память 128 ГБ.\r\n\r\nПроцессор Exynos 2100 с восьмиядерной конфигурацией служит сердцем Samsung Galaxy S21+. Благодаря работе в трех режимах он подстраивается под использование определенных приложений, повышая или понижая мощность. Для разграничения деловых и личных звонков можно установить две карты SIM, ведь конструкция корпуса для этого предусматривает соответствующие слоты. Первоклассные снимки пользователь получит благодаря камере 64+12+12 Мп.",
+      "price": "94999.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": true,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 4,
+      "tags": [
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 15,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Canon EOS R5 RF 24-105mm",
+      "short_description": "Беззеркальная камера Canon EOS R5 RF 24-105mm",
+      "description": "Беззеркальная камера Canon EOS R5 RF 24-105mm L IS USM с матрицей CMOS 47.1 Мп и объективом с фокусным расстоянием в пределах 24-105 мм обеспечивает высокое качество изображения различных жанров съемки. Широкий ряд параметров настройки позволяет воплотить собственные творческие идеи и получить реалистичные снимки в каждом кадре. \r\n\r\nАвтоматическая интеллектуальная фокусировка с точностью отслеживает объекты в кадре.\r\n\r\nСенсорный дисплей 3.15 дюйма позволяет с удобством просматривать снимки и контролировать съемку. В камере Canon EOS R5 реализованы беспроводные интерфейсы Wi-Fi, Bluetooth и GPS, слот под карту памяти, входы для микрофона и наушника, а также другие разъемы. Защищенный металлический корпус устойчив к воздействиям влаги и пыли.",
+      "price": "369999.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 5,
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 16,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Nikon Z7 Kit 24-70mm",
+      "short_description": "Камера со сменной оптикой Nikon Z7 Kit 24-70mm",
+      "description": "Камера со сменной оптикой Nikon Z7 Kit 24-70mm обладает полнокадровым байонетом Nikon Z, благодаря чему происходит захват большего количества света и передача его на матрицу. Фокусное расстояние составляет 24-70 мм. Диафрагма на 7 лепестков может изменяться от f/22 до f/4.0. Всего в объективе предусмотрено 14 оптических элементов, которые образуют 11 групп. Электронный видоискатель представлен жидкокристаллическим экраном с полем зрения до 100%.\r\n\r\nУстройство оснащено режимом макросъемки, возможностью запечатления серии снимков. Вспышка в комплекте отсутствует, но для нее встроен специальный башмак. Матрица КМОП имеет 45.7 эффективных мегапикселей. Максимальное разрешение кадра составляет 8256x5504. Стабилизируется изображение при помощи сдвига матрицы. Выдержку и диафрагму также можно настроить в ручном режиме.\r\n\r\nКамера со сменной оптикой Nikon Z7 Kit 24-70mm позволяет снимать видеозаписи в формате MOV и MP4 с разрешением 3840x2160. При записи видео предусмотрена автоматическая стабилизация. Батарея типа Li-Ion имеет емкость 1900 мА*ч.",
+      "price": "249999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 5,
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 17,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Sony Alpha 7 III Kit 28-70mm",
+      "short_description": "Беззеркальная камера Sony Alpha 7 III Kit 28-70mm",
+      "description": "Беззеркальная камера Sony Alpha 7 III (ILCE-7M3K) Kit 28-70mm черного цвета выполнена из пластика и магниевого сплава. Она использует наклонный сенсорный ЖК-экран для более легкой настройки, просмотра материала. Особенность дисплея в поддержке электронного видоискателя с окуляром, обеспечивающего точную компоновку кадров и их комфортное визирование.",
+      "price": "177999.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": true,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 5,
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 18,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Sony Alpha 7С Kit 28-60mm",
+      "short_description": "Беззеркальная камера Sony Alpha 7С Kit 28-60mm",
+      "description": "Беззеркальная камера Sony Alpha 7С (ILCE-7C) Kit 28-60mm основана на работе матрицы CMOS размерами 35.6x23.8 мм с поддержкой 25.3 Мп. Она не уступает ничуть полнокадровым аппаратам, обладая высокой функциональностью и производительностью. Модель содержит улучшенные механические компоненты, конструкцию и компоновку, имеет небольшой вес. Благодаря поддержке диафрагмы f/4-5.6 аппарат способен улавливать больше света, обеспечивая высокую детализацию, глубину изображения.",
+      "price": "167999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 5,
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 19,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Электрочайник Smeg KLF04BLEU",
+      "short_description": "Электрочайник Smeg KLF04BLEU черный",
+      "description": "Электрочайник Smeg KLF04BLEU выполнен в черном корпусе из нержавеющей стали. Благодаря сдержанному дизайну и аккуратным линиям данная модель сможет функционально дополнить и украсить кухню в любом стиле.\r\n\r\nНагревание воды в электрочайнике Smeg KLF04BLEU осуществляется при помощи специального нагревательного элемента, мощность которого достигает 2400 Вт, что обеспечивает кипячение до 100 °C за считанные мгновения. Для защиты элемента от накипи и ржавчины поверх расположена герметичная пластина из нержавеющей стали. Данная модель электрочайника отличается повышенной безопасностью использования благодаря наличию функции автоматического отключения при достижении максимальной температуры и при снятии с подставки. Также предусмотрена защита от перегрева.",
+      "price": "22499.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 8,
+      "tags": [
+        13,
+        12
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 20,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Bosch TWK 3P424",
+      "short_description": "Электрочайник Bosch TWK 3P424 красный",
+      "description": "Электрочайник Bosch TWK 3P424 подходит для использования дома или в офисе. Объема 1.7 л достаточно для кипячения воды для нескольких человек. Корпус красного цвета изготовлен из высокопрочной нержавеющей стали с пластиковыми элементами. Скрытый нагревательный элемент рассчитан на длительную работу, так как отсутствует прямой контакт с водой.",
+      "price": "5199.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 8,
+      "tags": [
+        9,
+        13,
+        12
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 21,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Tefal KI740B30",
+      "short_description": "Электрочайник Tefal KI740B30 серый",
+      "description": "Электрочайник Tefal KI740B30 станет тем бытовым прибором, который поможет вам окружить близких теплом и заботой. Вам интересно, каким это образом? За несколько минут он вскипятит полную колбу (1.7 л) воды, чтобы вы могли собрать домочадцев за чаепитием. \r\n\r\nПрозрачный корпус прибора выполнен из термостойкого стекла с серебристыми вставками. Это позволяет наблюдать за кипячением воды с удовольствием. Нагревательный элемент представлен металлическим диском. Пластиковая ручка электрочайника Tefal KI740B30 не нагревается.",
+      "price": "4099.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": true,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 8,
+      "tags": [
+        10,
+        13,
+        12
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 22,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Кофеварка капельная Moccamaster KBGT",
+      "short_description": "Кофеварка капельная Moccamaster KBGT красный",
+      "description": "Профессиональная капельная кофеварка премиум класса с термокувшином.\r\n\r\nКофеварки Moccamaster производятся, собираются и тестируются вручную в Нидерландах , сертифицированы ECBC и SCA по стандарту Gold Cup.\r\n\r\nЭти по-настоящему надёжные кофеварки созданы для того, чтобы дарить вам лучшие впечатления от кофе.",
+      "price": "27999.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 7,
+      "tags": [
+        11,
+        13
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 23,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Кофеварка капельная Bosch TKA6A041",
+      "short_description": "Кофеварка капельная Bosch TKA6A041 белый",
+      "description": "Кофеварка капельная Bosch TKA6A041 будет радовать вас ароматным кофе с насыщенным вкусом. Обладая мощностью 1200 Вт и резервуаром для воды объемом 1.25 л, кофеварка предусматривает возможность приготовления за один раз нескольких чашек напитка. Функция Aroma+button позволяет простым нажатием регулировать крепость напитка в зависимости от предпочтений. Для удобства в процессе использования кофеварка оснащена антикапельной системой и поддоном для жидкости с подогревом. Режимы автоматического отключения и удаления накипи гарантируют надежную и стабильную работу Bosch TKA6A041.",
+      "price": "5399.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 7,
+      "tags": [
+        9,
+        11,
+        13
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 24,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Кофеварка капельная Braun KF3120BK",
+      "short_description": "Кофеварка капельная Braun KF3120BK черный",
+      "description": "Кофеварка капельная Braun KF3120BK мощностью 1000 Вт объединила все возможные достоинства устройств такого типа. Ее небольшой пластиковый корпус займет мало места на кухонной поверхности. Простота и легкость использования прибора достойны отдельного упоминания: чтобы приготовить чашку кофе, достаточно пары движений. Устройство работает с молотым продуктом и автоматически отключается при готовности напитка.",
+      "price": "3999.00",
+      "amount": 300,
+      "free_delivery": false,
+      "sort_index": 1,
+      "limited": false,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 7,
+      "tags": [
+        11,
+        13
+      ]
+    }
+  },
+  {
+    "model": "app_goods.goods",
+    "pk": 25,
+    "fields": {
+      "deleted_at": null,
+      "part_num": 1,
+      "title": "Кофеварка капельная Tefal CM361838",
+      "short_description": "Кофеварка капельная Tefal CM361838 черный",
+      "description": "Кофеварка Tefal CM361838 в стильном корпусе черного цвета позволит сделать каждое утро прекрасным. Ее чаша имеет объем 1250 мл, что позволяет приготовить ароматный кофе на большую компанию. Мощность 1000 Вт позволит моментально получить готовый кофе, не тратя время на изнурительное ожидание. Особенно такая машина выручит, если вам необходимо сейчас же пробудиться.",
+      "price": "3199.00",
+      "amount": 300,
+      "free_delivery": true,
+      "sort_index": 1,
+      "limited": true,
+      "is_published": true,
+      "date_published": "2023-04-16",
+      "category": 7,
+      "tags": [
+        10,
+        11,
+        13
+      ]
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 1,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "img": "goods/abc42801265b270022796a5c9fb7e8648d80bb74cdf8511d0e8add2e1ba46c4c.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 2,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "img": "goods/de8a56f20ffc5654eae03407b33d705526de7d9a64867238f7dccf4d5328f6ae.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 3,
+    "fields": {
+      "deleted_at": null,
+      "good": 1,
+      "img": "goods/f6c9d4feb9b959c17d674ab86b05963430420114cbb1ebe9136838e12f1bdc04.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 4,
+    "fields": {
+      "deleted_at": null,
+      "good": 2,
+      "img": "goods/404e8a25c9987c811b17eeeeaded5a0ac7ddf73b7f0cd66fbb7066c5a648af1e.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 5,
+    "fields": {
+      "deleted_at": null,
+      "good": 2,
+      "img": "goods/a874279d5f63c01fd802bfce2695a7a20577b3d428528110ff837dd6f9194f6a.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 6,
+    "fields": {
+      "deleted_at": null,
+      "good": 3,
+      "img": "goods/c64ea146f371f4ff5064fdb9be2d83b75e03c761ec235a8d4f3915a68706394f.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 7,
+    "fields": {
+      "deleted_at": null,
+      "good": 3,
+      "img": "goods/d34aecab0e14bfac5816790cae24aec65fb0b97e735385bc6b741210cb9f0fbe.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 8,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "img": "goods/aa4f3214ae1e3c3bd678ceb510e5790c6e2cc4ebd9aa9be8e1145f6a851fb252.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 9,
+    "fields": {
+      "deleted_at": null,
+      "good": 4,
+      "img": "goods/50acf3e711e7ae73690202a211a4a55f739eb0d6340e45ee3811e089dbfcf833.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 10,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "img": "goods/9e4500904e70a76e33bf6e28c15fd2999c54642c9ec1131cf92dec11911fad19.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 11,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "img": "goods/1d5357b0ffe82d5de604f53e05de6319d8e8dcaa3bc48f47d530633d480a12b4.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 12,
+    "fields": {
+      "deleted_at": null,
+      "good": 5,
+      "img": "goods/6bdd71c536e5b722251700f08ba805724b647b9f90a786d8504c7e6db2e618dc.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 13,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "img": "goods/76b3217b8db137ddf32ee88d02009ac3e79025ee184d4cbba9adb4d6968aa436.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 14,
+    "fields": {
+      "deleted_at": null,
+      "good": 6,
+      "img": "goods/63025fe911da5cd321bcf31cfe594914afa265fb82ca5f5f4cd18e46f43c6c6e.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 15,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "img": "goods/bc1311aa320af2e639161b8f6b03f01d7f1d915c9186421f8472626fcad1195a.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 16,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "img": "goods/932d822ae1d426bbb459ce5c502ba8446823521d58eeed7714ae1af465cd49c0.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 17,
+    "fields": {
+      "deleted_at": null,
+      "good": 7,
+      "img": "goods/28202ee4fd6e7431b17cfba3aa947be8c4412aee284fec0ecb6983546fd2c991.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 18,
+    "fields": {
+      "deleted_at": null,
+      "good": 8,
+      "img": "goods/518dca5649e62ca5be1371c46444788f841549c939d15029b9050c94fbfe3f33.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 19,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "img": "goods/a87566e1a761e1c090ea9f430097c6b7513f7dfffb8344890c6ee14ea956bd0f.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 20,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "img": "goods/138a4e8bb23e1713b681f9f90e5e69e036dd3287fc15159bbcb235104621a20c.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 21,
+    "fields": {
+      "deleted_at": null,
+      "good": 9,
+      "img": "goods/b902e6cc4bcdb6bdf29f91e0a2e8d23648281eafbd92e17772061fa5dcac618c.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 22,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "img": "goods/d96c5f6f8e7d75dcd0e5899d5cdbd07d1eafe536ed9185cf30d19108876d0296.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 23,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "img": "goods/0ed3903b8a1b0f7cf2b782bcbf7464f4f127810c178eca3cba3c21aa57269547.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 24,
+    "fields": {
+      "deleted_at": null,
+      "good": 10,
+      "img": "goods/d29fa3719c28df8adb78842ed212280898c5db27d9fe729e63dc62a269c5ded4.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 25,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "img": "goods/928f208262d5c75241342483da048d7fd57b1bb9aa6099b7268208fbba2d47f7.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 26,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "img": "goods/86b42c34a4cd3c55b9fcaf9591b88ef0e320365428b56441adf8c8e8e20ca0ba.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 27,
+    "fields": {
+      "deleted_at": null,
+      "good": 11,
+      "img": "goods/ce8392c6b7034c172f290e12ebac6fdccde23f8fa4c96f359dabc7af74b623e9.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 28,
+    "fields": {
+      "deleted_at": null,
+      "good": 12,
+      "img": "goods/ebe6da0dbf5fdd3ae8cfccd0e44697e500ea2d933f26c20c6b87f4af01aaaa09.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 29,
+    "fields": {
+      "deleted_at": null,
+      "good": 13,
+      "img": "goods/3f5b1ce8a1ce54d7c58fe1a65bc30fa7332b0480765bb48dbeaa63b47f613897.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 30,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "img": "goods/3dbd8ae17c738cc3e02c861f6d3553f643cb40e504414f28b8f75e64160c685b.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 31,
+    "fields": {
+      "deleted_at": null,
+      "good": 14,
+      "img": "goods/1ff6de4985de4e3e209c0d401203256903dd7313a3363dbdd6082817e399b604.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 32,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "img": "goods/36658f9d186b9ec736828e63fce91c1e38b4c4af292dd5f41f18057783521290.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 33,
+    "fields": {
+      "deleted_at": null,
+      "good": 15,
+      "img": "goods/fbd55f88de490b1b0b64c771511b0a5d3afb127454e739b49bca2853e988ab93.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 34,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "img": "goods/d0c1e823ceaa3e811508be5ee17a2e30525de0f03fdcf9317889240d89022c16.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 35,
+    "fields": {
+      "deleted_at": null,
+      "good": 16,
+      "img": "goods/9d1f3749bc5d3da373fc13932f5437492e33d4792fcb2d1a8f2ad29f9629b902.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 36,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "img": "goods/3c83717d35d22103ae594632d75e08b22b813953a20ad2c121ddba3e747ed162.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 37,
+    "fields": {
+      "deleted_at": null,
+      "good": 17,
+      "img": "goods/715114b6beb0922263947f7efffc98cd51436b32bfc5c32f75c48bd1d5a87e82.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 38,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "img": "goods/683377bb8fc3f4e2d243c8f48a4cb6d4e46b87fe539fc9748c617cbf2233903b.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 39,
+    "fields": {
+      "deleted_at": null,
+      "good": 18,
+      "img": "goods/95dff293e5509ca00a13cf919fdd56c967eacb0b5347b3cb30b8708add9d0615.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 40,
+    "fields": {
+      "deleted_at": null,
+      "good": 19,
+      "img": "goods/bbff257a7b8edcf32662307e6ad8792246e9d55e4c2249d8bf677a71be166e9a.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 41,
+    "fields": {
+      "deleted_at": null,
+      "good": 19,
+      "img": "goods/2df6b6b42ce2c042ad86a220ba7de5f590370a81a6ffa01e068136f38c1715c0.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 42,
+    "fields": {
+      "deleted_at": null,
+      "good": 20,
+      "img": "goods/b07349c4f0de74780e398e864b43348b4ebf19abd2c10c24484728c6a543bd2a.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 43,
+    "fields": {
+      "deleted_at": null,
+      "good": 20,
+      "img": "goods/4986ff451745265a3e5fc1c2e286f2eeb97ff3112331e3cbe51cad25c5c690a3.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 44,
+    "fields": {
+      "deleted_at": null,
+      "good": 21,
+      "img": "goods/e24a533c7513abff48b01ab8eeba6ee3385bca1a5ca5531a72586bebb72fa8de.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 45,
+    "fields": {
+      "deleted_at": null,
+      "good": 21,
+      "img": "goods/c39619ab6c3587774872c1a2510fea277a6b7cfa3dd0fa02f66f359e2009e91e.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 46,
+    "fields": {
+      "deleted_at": null,
+      "good": 22,
+      "img": "goods/433685d57c20097ce293bcff68ce1964d7cb457b96af4ba483c80f41ad2faf2a.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 47,
+    "fields": {
+      "deleted_at": null,
+      "good": 22,
+      "img": "goods/fe53cbf12c3de43ca9fb3a6982064c77b48196888dec192bad80b2422362e480.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 48,
+    "fields": {
+      "deleted_at": null,
+      "good": 23,
+      "img": "goods/ac8fce8933831546fc9fabd7fc65b8199841e65009680d3c334012eecca263e8.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 49,
+    "fields": {
+      "deleted_at": null,
+      "good": 23,
+      "img": "goods/68c706a4b299eb98fb58901a587d280d73afb314a52f585c58bd51782d89a4d1.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 50,
+    "fields": {
+      "deleted_at": null,
+      "good": 24,
+      "img": "goods/a053d422c5ac36229df7775de8c71d9399627d4ee2e0ede8de8eee7372292dc4.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 51,
+    "fields": {
+      "deleted_at": null,
+      "good": 24,
+      "img": "goods/f97b96ff1526eaa6a837888c7a5fa59388a88b24cc680c4c5ff927eb07833e64.jpg.webp",
+      "main": false
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 52,
+    "fields": {
+      "deleted_at": null,
+      "good": 25,
+      "img": "goods/dae4220d1c8c9d0c9746908e688eb6cefc20256682120dde6670c06664fac4c7.jpg.webp",
+      "main": true
+    }
+  },
+  {
+    "model": "app_goods.imagegallery",
+    "pk": 53,
+    "fields": {
+      "deleted_at": null,
+      "good": 25,
+      "img": "goods/93a6bfa35a18e18ccd1dfa1b5d83025a7f8059f65b4b445df2ea8f886df8fa07.jpg.webp",
+      "main": false
+    }
+  }
+]

@@ -1,0 +1,258 @@
+{% extends "app_goods/base.html" %}
+{% load static %}
+{% load humanize %}
+{% block main %}
+    <div class="Middle Middle_top">
+        <div class="Middle-top">
+            <div class="wrap">
+                <div class="Middle-header">
+                    <h1 class="Middle-title">Каталог | {{ good.category.title }}
+                    </h1>
+                    <ul class="breadcrumbs Middle-breadcrumbs">
+                        <li class="breadcrumbs-item"><a href="{% url 'main' %}">Главная</a>
+                        </li>
+                        <li class="breadcrumbs-item breadcrumbs-item_current"><span>Каталог</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message|stringformat:"s" == "successfully_added" %}
+                    <script type="text/javascript">
+
+                        window.onload = function () {
+                            new Toast({
+                                title: false,
+                                text: "Товар успешно добавлен в корзину",
+                                theme: "success",
+                                autohide: true,
+                                interval: 2000
+                            });
+                        };
+                    </script>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="Section">
+            <div class="wrap">
+                <div class="Product">
+                        <div class="ProductCard">
+                            <div class="ProductCard-look">
+                                <div class="ProductCard-photo">
+                                    <img src="{{ good.images.first.img.url }}" alt="bigGoods.png"/>
+                                </div>
+                                <div class="ProductCard-picts">
+                                    {% for image in good.images.all %}
+                                        <a class="ProductCard-pict ProductCard-pict_ACTIVE" href="{{ image.img.url }}">
+                                            <img src="{{ image.img.url }}" alt="bigGoods.png"/>
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="ProductCard-desc">
+                                <div class="ProductCard-header">
+                                    <h2 class="ProductCard-title">{{ good.title }}
+                                    </h2>
+                                    <div class="ProductCard-info">
+                                        <div class="ProductCard-cost">
+                                            <div class="ProductCard-price">{{ good.price|intcomma }} Р.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCard-text">
+                                    {{ good.short_description }}
+                                </div>
+                                <form class="ProductCard-cart" action="#" method="post">
+                                    {{ cart_errors }}
+                                    {% csrf_token %}
+                                    <div class="ProductCard-cartElement ProductCard-cartElement_amount">
+                                        <div class="Amount Amount_product">
+                                            <button class="Amount-remove" type="button">
+                                            </button>
+                                            <input class="Amount-input form-input" id="quantity" name="quantity"
+                                                   type="text"
+                                                   value="1"/>
+                                            <button class="Amount-add" type="button">
+                                                <input name="update" type="hidden"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ProductCard-cartElement">
+                                        <a class="btn btn_primary" id="add_to_cart">
+                                            <img class="btn-icon"
+                                                 src="{% static 'app_goods/assets/img/icons/card/cart_white.svg' %}"
+                                                 alt="cart_white.svg"/>
+                                            <span class="btn-content">Добавить в корзину</span></a>
+                                    </div>
+                                    <script type="text/javascript">
+                                        const button = document.querySelector("#add_to_cart");
+                                        const inputText = document.querySelector("#quantity");
+
+                                        button.addEventListener("click", clickButton);
+
+                                        function clickButton() {
+                                            var URL = "{% url 'cart-add_amount' good.pk 'add' 12345 %}".replace(/12345/, inputText.value.toString());
+                                            var win = window.open(URL, "_self");
+                                        }
+                                    </script>
+                                </form>
+                                <div class="ProductCard-footer">
+                                    <div class="ProductCard-tags">
+                                        <strong class="ProductCard-tagsTitle">Теги:
+
+                                        </strong>
+                                        {% for tag in good.tags.all %}
+                                            <a href="{% url 'products' good.category.slug %}?tag={{ tag.pk }}">{{ tag.name }}</a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="Tabs Tabs_default">
+                            <div class="Tabs-links">
+                                <a class="Tabs-link_ACTIVE Tabs-link" href="#description">
+                                    <span>Описание</span>
+                                </a>
+                                <a class="Tabs-link" href="#addit">
+                                    <span>Подробная информация</span>
+                                </a>
+                                <a class="Tabs-link" href="#reviews">
+                                    <span>Отзывы {{ good.reviews.all.count }}</span>
+                                </a>
+                            </div>
+                            <div class="Tabs-wrap">
+                            <div class="Tabs-block" id="description">
+                                <h2>{{ good.title }}
+                                </h2>
+                                <p>{{ good.short_description }}</p>
+                                <img class="pict pict_right"
+                                     src="{{ good.images.first.img.url }}"
+                                     alt="bigGoods.png"/>
+                                <div>
+                                    {{ good.description }}
+                                </div>
+                                <div class="clearfix">
+                                </div>
+                                <div class="table">
+                                    <table>
+                                        <tr>
+                                            <th>Характеристика
+                                            </th>
+                                            <th>Значение
+                                            </th>
+                                        </tr>
+                                        {% for param in good.params.all %}
+                                            {% if param.param.main %}
+                                                <tr>
+                                                    <td>{{ param.param.name }}
+                                                    </td>
+                                                    <td>{{ param.value }}
+                                                    </td>
+                                                </tr>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="Tabs-block" id="sellers">
+                                <div class="Categories Categories_product">
+                                </div>
+                            </div>
+                            <div class="Tabs-block" id="addit">
+                                <div class="Product-props">
+                                    {% for param in good.params.all %}
+                                        <div class="Product-prop">
+                                            <strong>
+                                                {{ param.param.name }}
+                                            </strong>
+                                            <span>
+                                        {{ param.value }}
+                                    </span>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        <div class="Tabs-block" id="reviews">
+                            <header class="Section-header">
+                                <h3 class="Section-title">
+                                    {{ good.reviews.all.count }} Отзывы
+                                </h3>
+                            </header>
+                            <div class="Comments">
+                                {% for review in good.reviews.all %}
+                                    <div class="Comment">
+                                    <div class="Comment-column Comment-column_pict">
+                                        {% if not review.user.profile.avatar %}
+                                            <div class="Comment-avatar">
+                                        {% else %}
+                                            <div class="Comment-avatar-user"
+                                                 style="background-image: url({{ review.user.profile.avatar.url }})">
+                                        {% endif %}
+                                        </div>
+                                        </div>
+                                        <div class="Comment-column">
+                                            <header class="Comment-header">
+                                                <div>
+                                                    <strong class="Comment-title">{{ review.user }}
+                                                    </strong><span
+                                                        class="Comment-date">{{ review.date_published }}</span>
+                                                </div>
+                                            </header>
+                                            <div class="Comment-content">
+                                                {{ review.text }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                                </div>
+                                <header class="Section-header Section-header_product">
+                                    <h3 class="Section-title">Добавить отзыв
+                                    </h3>
+                                </header>
+                                {% if request.user.is_authenticated %}
+                                    <div>{{ review_errors }}</div>
+                                    <div class="Tabs-addComment">
+                                        <form class="form" action="#" method="post">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                        <textarea class="form-textarea" name="text" id="review"
+                                                  placeholder="Текст отзыва"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="row-block">
+                                                        <input class="form-input" id="name" name="user" type="text"
+                                                               value="{{ request.user.profile.name }} {{ request.user.profile.surname }}"
+                                                               readonly/>
+                                                    </div>
+                                                    <div class="row-block">
+                                                        <input class="form-input" id="email" name="email"
+                                                               type="text"
+                                                               value="{{ request.user.profile.email }}" readonly/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn_muted" type="submit">Отправить
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                {% else %}
+                                    <div>
+                                        <a href="{% url 'login' %}">Авторизуйтесь</a>, чтобы иметь возможность
+                                        оставлять отзывы.
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

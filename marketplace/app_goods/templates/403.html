@@ -1,0 +1,30 @@
+{% extends 'app_goods/base.html' %}
+{% block main %}
+    <div class="Middle-top">
+        <div class="wrap">
+            <div class="Middle-header">
+                <h1 class="Middle-title">Доступ запрещен
+                </h1>
+                <ul class="breadcrumbs Middle-breadcrumbs">
+                    <li class="breadcrumbs-item"><a href="{% url 'main' %}">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-item breadcrumbs-item_current"><span>Доступ запрещен</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="Section">
+        <div class="wrap">
+            <div class="ProgressPayment">
+                <div class="ProgressPayment-title" style="margin-bottom: 20px;">
+                    {% if exception %}
+                    {{ exception }}
+                    {% else %}
+                    Похоже на то, что у вас отсутствует разрешение на просмотр данной страницы.
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

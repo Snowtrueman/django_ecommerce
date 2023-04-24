@@ -1,0 +1,65 @@
+{% extends "app_goods/base.html" %}
+{% load static %}
+{% block main %}
+    <div class="Middle Middle_top">
+        <div class="Middle-top">
+            <div class="wrap">
+                <div class="Middle-header">
+                    <h1 class="Middle-title">{{ account_title }}
+                    </h1>
+                    <ul class="breadcrumbs Middle-breadcrumbs">
+                        <li class="breadcrumbs-item"><a href="{% url 'main' %}">Главная</a>
+                        </li>
+                        <li class="breadcrumbs-item breadcrumbs-item_current"><span>{{ account_title }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="Message-{{ message.tags }}">
+                        <div>
+                            {{ message }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="Section Section_column Section_columnLeft">
+            <div class="wrap">
+                <div class="Section-column">
+                    <div class="Section-columnSection">
+                        <header class="Section-header">
+                            <strong class="Section-title">Навигация
+                            </strong>
+                        </header>
+                        <div class="Section-columnContent">
+                            <div class="NavigateProfile">
+                                <ul class="menu menu_vt">
+                                    <li class="{{ account_active }} menu-item">
+                                        <a class="menu-link" href="{% url 'account' request.user %}">Личный кабинет</a>
+                                    </li>
+                                    <li class="{{ profile_active }} menu-item">
+                                        <a class="menu-link" href="{% url 'profile' request.user %}">Профиль</a>
+                                    </li>
+                                    <li class="{{ historyorder_active }} menu-item">
+                                        <a class="menu-link" href="{% url 'orders_history' %}">История заказов</a>
+                                    </li>
+                                    {% if request.user.is_superuser %}
+                                        <li class="{{ sitesettings_active }} menu-item">
+                                            <a class="menu-link" href="{% url 'settings' %}">Настройки сайта</a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

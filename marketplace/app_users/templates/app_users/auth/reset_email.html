@@ -1,0 +1,13 @@
+{% autoescape off %}
+Вы получили это письмо так как для Вашего аккаунта на сайте {{ site_name }} было запрошено восстановление пароля.
+
+Пожалуйста, пройдите по следующей ссылке и укажите новый пароль:
+{% block reset_link %}
+https://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+{% endblock %}
+
+Спасибо за то, что с нами!
+
+Команда {{ site_name }}
+
+{% endautoescape %}

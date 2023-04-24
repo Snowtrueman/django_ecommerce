@@ -1,0 +1,35 @@
+{% extends "app_users/basic_account.html" %}
+{% load static %}
+{% block content %}
+    <div class="Section-content">
+        <div class="Profile">
+            {% if errors %}
+                <div class="form-group" style="color: red;">
+                    {{ errors }}
+                </div>
+            {% endif %}
+            <form class="form Profile-form" action="#" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="row-block">
+                        <div class="row-block">
+                            {% for field in form %}
+                                <div class="form-group">
+                                    <label class="form-label">{{ field.label_tag }}</label>
+                                    {{ field.errors }}
+                                    {{ field }}
+                                </div>
+                            {% endfor %}
+                            <div class="form-group">
+                                <div class="Profile-btn">
+                                    <button class="btn btn_success">Сохранить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

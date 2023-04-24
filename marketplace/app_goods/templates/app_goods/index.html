@@ -1,0 +1,204 @@
+{% extends "app_goods/base.html" %}
+{% load static %}
+{% load humanize %}
+{% block main %}
+    <div class="Middle">
+        {% block special %}
+            <div class="Section">
+                <div class="wrap">
+                    <div class="BannersHome">
+                        {% for selected_cat in selected_cats %}
+                            <a class="BannersHomeBlock" href="{% url 'products' selected_cat.slug %}">
+                                <div class="BannersHomeBlock-row">
+                                    <div class="BannersHomeBlock-block">
+                                        <strong class="BannersHomeBlock-title">{{ selected_cat.title }}
+                                        </strong>
+                                        <div class="BannersHomeBlock-content">от&#32;<span
+                                                class="BannersHomeBlock-price">
+                                            {% firstof selected_cat.min_price|intcomma %} Р.</span>
+                                        </div>
+                                    </div>
+                                    <div class="BannersHomeBlock-block">
+                                        <div class="BannersHomeBlock-img"><img
+                                                src="{{ selected_cat.img.url }}"
+                                                alt="videoca.png"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+        {% block popular %}
+            <div class="Section Section_column Section_columnDesktop">
+                <div class="wrap">
+                    <div class="Section-content">
+                        <header class="Section-header">
+                            <h2 class="Section-title">Популярное
+                            </h2>
+                        </header>
+                        <div class="Cards">
+                            {% for top_good in top_goods %}
+                                <div class="Card"><a class="Card-picture" href="{{ top_good.get_absolute_url }}"><img
+                                        src="{{ top_good.images.first.img.url }}" alt="card.jpg"/></a>
+                                    <div class="Card-content">
+                                        <strong class="Card-title"><a
+                                                href="{{ top_good.get_absolute_url }}">{{ top_good.title }}</a>
+                                        </strong>
+                                        <div class="Card-description">
+                                            <div class="Card-cost"><span
+                                                    class="Card-price">{{ top_good.price|intcomma }} Р.</span>
+                                            </div>
+                                            <div class="Card-category">
+                                                {% if top_good.category.parent %}
+                                                    {{ top_good.category.parent }} /
+                                                {% endif %}
+                                                {{ top_good.category }}
+                                            </div>
+                                            {% if messages %}
+                                                {% for message in messages %}
+                                                    {% if message|stringformat:"s" == "successfully_added" %}
+                                                        <script type="text/javascript">
+
+                                                            window.onload = function () {
+                                                                new Toast({
+                                                                    title: false,
+                                                                    text: "Товар успешно добавлен в корзину",
+                                                                    theme: "success",
+                                                                    autohide: true,
+                                                                    interval: 2000
+                                                                });
+                                                            };
+                                                        </script>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endif %}
+                                            <div class="Card-hover"><a class="Card-btn" id="add-msg"
+                                                                       href="{% url 'cart-edit' top_good.pk 'add' %}">
+                                                <img src="{% static 'app_goods/assets/img/icons/card/cart.svg' %}"
+                                                     alt="cart.svg"/></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+        {% block limited %}
+            <div class="Section Section_column Section_columnRight">
+                <div class="wrap">
+                    <div class="Section-column">
+                        <div class="Section-columnSection Section-columnSection_mark">
+                            <div class="media media_advantage">
+                                <div class="media-image"><img
+                                        src="{% static 'app_goods/assets/img/icons/advantages/shipping.svg' %}"
+                                        alt="shipping.svg"/>
+                                </div>
+                                <div class="media-content">
+                                    <strong class="media-title">Доставка
+                                    </strong>
+                                    <p class="media-text">Доставка по России
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Section-columnSection Section-columnSection_mark">
+                            <div class="media media_advantage">
+                                <div class="media-image"><img
+                                        src="{% static 'app_goods/assets/img/icons/advantages/moneyBack.svg' %}"
+                                        alt="moneyBack.svg"/>
+                                </div>
+                                <div class="media-content">
+                                    <strong class="media-title">Оплата
+                                    </strong>
+                                    <p class="media-text">Возврат денег
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Section-columnSection Section-columnSection_mark">
+                            <div class="media media_advantage">
+                                <div class="media-image"><img
+                                        src="{% static 'app_goods/assets/img/icons/advantages/support.svg' %}"
+                                        alt="support.svg"/>
+                                </div>
+                                <div class="media-content">
+                                    <strong class="media-title">Поддержка
+                                    </strong>
+                                    <p class="media-text">Оперативная помощь
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Section-columnSection Section-columnSection_mark">
+                            <div class="media media_advantage">
+                                <div class="media-image"><img
+                                        src="{% static 'app_goods/assets/img/icons/advantages/quality.svg' %}"
+                                        alt="quality.svg"/>
+                                </div>
+                                <div class="media-content">
+                                    <strong class="media-title">Гарантия качества
+                                    </strong>
+                                    <p class="media-text">Только оригинальные товары
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Section-content">
+                        <div class="Slider Slider_carousel">
+                            <header class="Section-header Section-header_close">
+                                <h2 class="Section-title">Спецпредложения
+                                </h2>
+                                <div class="Section-control">
+                                    <div class="Slider-navigate">
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="Slider-box Cards">
+                                {% for limited_good in limited_goods %}
+                                    <div class="Slider-item">
+                                        <div class="Slider-content">
+                                            <div class="Card">
+                                                <a class="Card-picture" href="{{ limited_good.get_absolute_url }}"><img
+                                                        src="{{ limited_good.images.first.img.url }}"
+                                                        alt="card.jpg"/></a>
+                                                <div class="Card-content">
+                                                    <strong class="Card-title">
+                                                        <a href="{{ limited_good.get_absolute_url }}">{{ limited_good.title }}</a>
+                                                    </strong>
+                                                    <div class="Card-description">
+                                                        <div class="Card-cost"><span
+                                                                class="Card-price">{{ limited_good.price }} Р.</span>
+                                                        </div>
+                                                        <div class="Card-category">
+                                                            {% if limited_good.category.parent %}
+                                                                {{ limited_good.category.parent }} /
+                                                            {% endif %}
+                                                            {{ limited_good.category }}
+                                                        </div>
+                                                        <div class="Card-hover">
+                                                            <a class="Card-btn"
+                                                               href="{% url 'cart-edit' limited_good.pk 'add' %}"><img
+                                                                    src="{% static 'app_goods/assets/img/icons/card/cart.svg' %}"
+                                                                    alt="cart.svg"/></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

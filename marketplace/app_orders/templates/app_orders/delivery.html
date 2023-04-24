@@ -1,0 +1,48 @@
+{% extends "app_orders/order_basic.html" %}
+{% load static %}
+{% block content %}
+    <div class="Section-content">
+        <form class="form" action="#" method="post">
+            {% csrf_token %}
+            <div class="Order-block Order-block_OPEN">
+                <header class="Section-header Section-header_sm">
+                    <h2 class="Section-title">Шаг 2. Способ доставки
+                    </h2>
+                </header>
+            <div>
+                {{ form.city.errors }}
+                {{ form.address.errors }}
+            </div>
+                <div class="form-group">
+                    {{ form.delivery.errors }}
+
+                    <div>
+                        <label class="toggle">
+                            <input type="radio" name="delivery" value="ordinary"
+                                   {% if request.session.order_details.delivery_type == 'ordinary' %}checked="checked"{% endif %}/><span
+                                class="toggle-box"></span><span class="toggle-text">Обычная доставка</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="toggle">
+                            <input type="radio" name="delivery" value="express"
+                            {% if request.session.order_details.delivery_type == 'express' %}checked="checked"{% endif %}/><span class="toggle-box"></span><span
+                                class="toggle-text">Экспресс доставка</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">{{ form.city.label_tag }}</label>
+                    <input class="form-input" value="{% firstof request.session.order_details.city ""%}" id="city" name="city" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">{{ form.address.label_tag }}</label>
+                    <textarea class="form-textarea" name="address" id="address">{%  firstof request.session.order_details.address ""%}</textarea>
+                </div>
+                <div class="Order-footer"><button type="submit" class="btn btn_success ">Дальше</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "app_orders/order_basic.html" %}
+{% load static %}
+{% block content %}
+    <div class="Section-content">
+        <form class="form" action="#" method="post">
+            {% csrf_token %}
+            <div class="Order-block Order-block_OPEN">
+                <header class="Section-header Section-header_sm">
+                    <h2 class="Section-title">Шаг 3. Способ оплаты
+                    </h2>
+                </header>
+                <div>
+                    {{ form.delivery.errors }}
+                </div>
+                <div class="form-group">
+
+                    <div>
+                        <label class="toggle">
+                            <input type="radio" name="payment" value="online"
+                                   {% if request.session.order_details.payment_type == 'online' %}checked="checked"{% endif %}/><span
+                                class="toggle-box"></span><span class="toggle-text">Онлайн картой</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="toggle">
+                            <input type="radio" name="payment" value="someone"
+                                   {% if request.session.order_details.payment_type == 'someone' %}checked="checked"{% endif %}/><span
+                                class="toggle-box"></span><span
+                                class="toggle-text">Онлайн со случайного чужого счета</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="Order-footer">
+                    <button type="submit" class="btn btn_success ">Дальше</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

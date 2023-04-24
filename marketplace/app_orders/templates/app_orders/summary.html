@@ -1,0 +1,124 @@
+{% extends "app_orders/order_basic.html" %}
+{% load static %}
+{% load humanize %}
+{% load templatetags %}
+{% block content %}
+    <div class="Section-content">
+        <form class="form" action="#" method="post">
+            {% csrf_token %}
+            <div class="Order-block Order-block_OPEN" id="step4">
+                <header class="Section-header Section-header_sm">
+                    <h2 class="Section-title">Шаг 4. Подтверждение заказа
+                    </h2>
+                </header>
+                <!--+div.Order.-confirmation-->
+                <div class="Order-infoBlock">
+                    <div class="Order-personal">
+                        <div class="row">
+                            <div class="row-block">
+                                <div class="Order-info">
+                                    <div class="Order-infoType">ФИО:
+                                    </div>
+                                    <div class="Order-infoContent">{{ request.session.order_details.fullname }}
+                                    </div>
+                                </div>
+                                <div class="Order-info">
+                                    <div class="Order-infoType">Телефон:
+                                    </div>
+                                    <div class="Order-infoContent">+7{{ request.session.order_details.phone }}
+                                    </div>
+                                </div>
+                                <div class="Order-info">
+                                    <div class="Order-infoType">E-mail:
+                                    </div>
+                                    <div class="Order-infoContent">{{ request.session.order_details.email }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-block">
+                                <div class="Order-info Order-info_delivery">
+                                    <div class="Order-infoType">Тип доставки:
+                                    </div>
+                                    {% if request.session.order_details.delivery_type == "ordinary" %}
+                                        <div class="Order-infoContent">Обычная доставка</div>
+                                    {% elif request.session.order_details.delivery_type == "express" %}
+                                        <div class="Order-infoContent">Экспресс-доставка</div>
+                                    {% endif %}
+                                </div>
+                                <div class="Order-info">
+                                    <div class="Order-infoType">Город:
+                                    </div>
+                                    <div class="Order-infoContent">{{ request.session.order_details.city }}
+                                    </div>
+                                </div>
+                                <div class="Order-info">
+                                    <div class="Order-infoType">Адрес:
+                                    </div>
+                                    <div class="Order-infoContent">{{ request.session.order_details.address }}
+                                    </div>
+                                </div>
+                                <div class="Order-info Order-info_pay">
+                                    <div class="Order-infoType">Оплата:
+                                    </div>
+                                    {% if request.session.order_details.payment_type == "online" %}
+                                        <div class="Order-infoContent">Онлайн картой</div>
+                                    {% elif request.session.order_details.payment_type == "someone" %}
+                                        <div class="Order-infoContent">Онлайн со случайного чужого счета</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Cart Cart_order">
+                    {% for product in cart %}
+                        <div class="Cart-product">
+                            <div class="Cart-block Cart-block_row">
+                                <div class="Cart-block Cart-block_pict">
+                                    <a class="Cart-pict" href="{{ product.good.get_absolute_url }}">
+                                        <img class="Cart-img" src="{{ product.good.images.first.img.url }}"
+                                             alt="The picture of product"/></a>
+                                </div>
+                                <div class="Cart-block Cart-block_info">
+                                    <a class="Cart-title"
+                                       href="{{ product.good.get_absolute_url }}">{{ product.good.title }}</a>
+                                    <div class="Cart-desc">{{ product.good.short_description }}
+                                    </div>
+                                </div>
+                                <div class="Cart-block Cart-block_price">
+                                    <div class="Cart-price">{{ product.good.price }}&nbsp;Р.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Cart-block Cart-block_row">
+                                <div class="Cart-block Cart-block_amount">{{ product.quantity }} шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_quantity_error">
+                            {% get_product_quantity_error product.good.pk %}
+                        </div>
+                    {% endfor %}
+                    <div class="Cart-total">
+                        <div class="Cart-block Cart-block_total">
+                            <strong class="Cart-title">Стоимость доставки:
+                            </strong><span class="Cart-price">{{ request.session.order_details.delivery_price|intcomma }} Р.</span>
+                        </div>
+                    </div>
+                    <div class="Cart-total">
+                        <div class="Cart-block Cart-block_total">
+                            <strong class="Cart-title">Итого:
+                            </strong><span class="Cart-price">{{ total_price|add:request.session.order_details.delivery_price|intcomma }} Р.</span>
+                        </div>
+                        <div class="Cart-block">
+                            <button class="btn btn_primary btn_lg" type="submit">Оплатить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
+

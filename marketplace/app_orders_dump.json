@@ -1,0 +1,18 @@
+[
+  {
+    "model": "app_orders.payment",
+    "pk": 1,
+    "fields": {
+      "type": "online",
+      "slug": "online"
+    }
+  },
+  {
+    "model": "app_orders.payment",
+    "pk": 2,
+    "fields": {
+      "type": "someone",
+      "slug": "someone"
+    }
+  }
+]

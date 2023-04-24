@@ -1,0 +1,81 @@
+{% extends "app_users/basic_account.html" %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+    <div class="Section-content">
+        <div class="Account">
+            <div class="Account-group">
+                <div class="Account-column">
+                    <div class="Account-avatar">
+                        {% if user_account.avatar %}
+                            <img src="{{ user_account.avatar.url }}" alt="User avatar"/>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="Account-column">
+                    <div class="Account-name">
+                        {{ user_account.name }}
+                        {% if user_account.name %}
+                            {{ user_account.surname }}
+                        {% endif %}
+                    </div>
+                    <a class="Account-editLink" href="{% url 'profile' request.user %}">Редактировать
+                        профиль</a>
+                </div>
+            </div>
+            <div class="Account-group">
+                <div class="Account-column Account-column_full">
+                    <div class="Order Order_anons">
+                        <div class="Order-personal">
+                            <div class="row">
+                            {% if last_order %}
+                                <div class="row-block">
+                                    <a class="Order-title" href="{% url 'order_detail' last_order.pk %}">Заказ&#32;<span
+                                            class="Order-numberOrder">№{{ last_order.pk }}</span>&#32;от&#32;<span
+                                            class="Order-dateOrder">{{ order.date|date }}</span></a>
+                                    <div class="Account-editLink">
+                                        <a href="{% url 'orders_history' %}">История заказов</a>
+                                    </div>
+                                </div>
+                                <div class="row-block">
+                                    <div class="Order-info Order-info_delivery">
+                                        <div class="Order-infoType">Тип доставки:
+                                        </div>
+                                        <div class="Order-infoContent">
+                                            {% if last_order.delivery_type == "ordinary" %}
+                                            <div class="Order-infoContent">Обычная доставка</div>
+                                        {% elif last_order.delivery_type == "express" %}
+                                            <div class="Order-infoContent">Экспресс-доставка</div>
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="Order-info Order-info_pay">
+                                        <div class="Order-infoType">Оплата:
+                                        </div>
+                                        <div class="Order-infoContent">{{ last_order.payment_type.get_type_display }}
+                                        </div>
+                                    </div>
+                                    <div class="Order-info">
+                                        <div class="Order-infoType">Общая стоимость:
+                                        </div>
+                                        <div class="Order-infoContent">{{ last_order.total_price|add:last_order.delivery_price|intcomma }}&nbsp;Р.
+                                        </div>
+                                    </div>
+                                    <div class="Order-info Order-info_status">
+                                        <div class="Order-infoType">Статус:
+                                        </div>
+                                        <div class="Order-infoContent">{{ last_order.get_status_display }}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% else %}
+                            <div>У вас пока не было ни одного заказа.</div>
+                            {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

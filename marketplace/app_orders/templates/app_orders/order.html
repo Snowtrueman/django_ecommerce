@@ -1,0 +1,61 @@
+{% extends "app_orders/order_basic.html" %}
+{% load static %}
+{% block content %}
+    <div class="Section-content">
+        <form class="form" action="#" method="post">
+            {% csrf_token %}
+            <div class="Order-block Order-block_OPEN">
+                <header class="Section-header Section-header_sm">
+                    <h2 class="Section-title">Шаг 1. Параметры пользователя
+                    </h2>
+                </header>
+                <div class="row">
+                    <div class="row-block">
+                        <div class="form-group">
+                            <label class="form-label">{{ form.fullname.label_tag }} </label>
+                            <input class="form-input" id="fullname" name="fullname" type="text"
+                                   value="{{ request.user.profile.name }} {{ request.user.profile.surname }}"/>
+                            <div class="form-error">{{ form.fullname.errors|escape }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">{{ form.phone.label_tag }}</label>
+                            <input class="form-input" id="phone" name="phone" type="text"
+                                   value="+7{{ request.user.profile.phone }}"/>
+                            <div class="form-error">{{ form.phone.errors|escape }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">{{ form.email.label_tag }}</label>
+                            <input class="form-input" id="email" name="email" type="text"
+                                   value="{{ request.user.profile.email }}" data-validate="require"/>
+                            <div class="form-error">{{ form.email.errors|escape }}</div>
+                        </div>
+                    </div>
+                    {% if not user.is_authenticated %}
+                        <div class="row-block">
+                            <div class="form-group">
+                                <label class="form-label" for="password1">Пароль
+                                </label>
+                                <input class="form-input" id="password1" name="password1" type="password"
+                                       placeholder="Тут можно задать пароль"/>
+                                <div class="form-error">{{ form.password1.errors|escape }}</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="password2">Подтверждение пароля
+                                </label>
+                                <input class="form-input" id="password2" name="password2" type="password"
+                                       placeholder="Введите пароль повторно"/>
+                                <div class="form-error">{{ form.password2.errors|escape }}</div>
+                            </div>
+                            <div class="form-group"><a class="btn btn_muted Order-btnReg" href="{% url 'login' %}">Я уже
+                                зарегистрирован</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="Order-footer">
+                    <button type="submit" class="btn btn_success ">Дальше</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
