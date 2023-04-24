@@ -188,3 +188,13 @@ class Reviews(models.Model):
 
     def __str__(self):
         return f"{self.date_published} {self.user} {self.good}"
+
+
+@receiver(post_save, sender=Reviews)
+def reviews_post_save_handler(sender, instance, **kwargs):
+    try:
+        good = Goods.objects.get(pk=instance.good.pk)
+    except sender.DoesNotExist:
+        pass
+    else:
+        cache.delete(f"product_{good.pk}")
